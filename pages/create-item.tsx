@@ -35,7 +35,9 @@ function CreateItem(props: CreateProps) {
       <Nav />
       <h1>Create a New Item</h1>
       <form onSubmit={handleSubmit}>
-        <input type="text" ref={item}></input>
+        <label>
+          Item: <input type="text" ref={item}></input>
+        </label>
         <input className="" type="submit" value="create item"></input>
       </form>
     </div>
