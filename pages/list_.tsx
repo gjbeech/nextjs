@@ -1,13 +1,13 @@
 import Nav from "../components/Nav";
 
-export default function manageTags() {
-  console.dir("wishlist");
+export default function List() {
+  console.dir("list");
 
   return (
     <div>
       <main>
         <Nav />
-        Manage tags
+        List
         <ul></ul>
       </main>
     </div>
