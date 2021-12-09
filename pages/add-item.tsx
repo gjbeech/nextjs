@@ -9,7 +9,7 @@ export default function AddItem() {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
 
-  const handlePost = async (e) => {
+  const handlePost = async (e: any) => {
     e.preventDefault();
 
     // reset error and message
