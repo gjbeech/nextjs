@@ -38,11 +38,15 @@ function CreateList(props: CreateProps) {
       <h1>Create a new list</h1>
       <main>
         <form onSubmit={handleSubmit}>
-          <label>List title: </label>
-          <input type="text" ref={title}></input>
+          <label>
+            List title:
+            <input type="text" ref={title}></input>
+          </label>
           <br />
-          <label>List type: </label>
-          <input type="text" ref={type}></input>
+          <label>
+            List type:
+            <input type="text" ref={type}></input>
+          </label>
           <br />
           <input className="" type="submit" value="create item"></input>
         </form>
