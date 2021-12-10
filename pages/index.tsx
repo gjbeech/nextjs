@@ -1,11 +1,10 @@
-import { useState } from "react";
 import React from "react";
+import Nav from "../components/Nav";
 import { ListView } from "../components/ListView";
 
 import { List } from "../utils/types";
 import Head from "next/head";
 import Link from "next/link";
-import Nav from "../components/Nav";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import CreateListItem from "../components/CreateListItem";

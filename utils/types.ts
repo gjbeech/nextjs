@@ -9,7 +9,7 @@ export interface ResponseFuncs {
 export interface ListItem {
   _id?: number;
   item: string;
-  completed: boolean;
+  listId: string;
 }
 
 export interface List {

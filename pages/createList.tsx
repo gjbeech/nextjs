@@ -17,19 +17,21 @@ function CreateList(props: CreateProps) {
 
     let list: List = { title: "", type: "" };
     // let typeValue = type?.current?.value ?? "";
-    if (null !== title.current) {
+    if (title.current !== null && title.current.value != "") {
       list = { title: title.current.value, type: type?.current?.value ?? "" };
+
+      await fetch(props.url, {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(list),
+      });
+
+      router.push("/");
+    } else {
+      console.log("title is empty");
     }
-
-    await fetch(props.url, {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(list),
-    });
-
-    router.push("/");
   };
 
   return (
@@ -48,7 +50,7 @@ function CreateList(props: CreateProps) {
             <input type="text" ref={type}></input>
           </label>
           <br />
-          <input className="" type="submit" value="create item"></input>
+          <input className="" type="submit" value="Add List"></input>
         </form>
       </main>
     </div>

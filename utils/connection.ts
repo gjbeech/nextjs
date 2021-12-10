@@ -15,7 +15,7 @@ export const connect = async () => {
 
   const ListItemSchema = new mongoose.Schema({
     item: String,
-    completed: Boolean,
+    listId: String,
   });
 
   const TagSchema = new mongoose.Schema({
