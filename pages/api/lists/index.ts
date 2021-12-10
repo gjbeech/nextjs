@@ -3,16 +3,16 @@ import { connect } from "../../../utils/connection";
 import { ResponseFuncs } from "../../../utils/types";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET,OPTIONS,PATCH,DELETE,POST,PUT"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-  );
+  // res.setHeader("Access-Control-Allow-Credentials", "true");
+  // res.setHeader("Access-Control-Allow-Origin", "*");
+  // res.setHeader(
+  //   "Access-Control-Allow-Methods",
+  //   "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+  // );
+  // res.setHeader(
+  //   "Access-Control-Allow-Headers",
+  //   "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+  // );
 
   const method: keyof ResponseFuncs = req.method as keyof ResponseFuncs;
   if (method === "OPTIONS") {
