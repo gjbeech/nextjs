@@ -83,20 +83,6 @@ export function Home() {
   //useState();
   //const pets = fetchPets();
 
-  //console.dir(pets);
-
-  // var MongoClient = require("mongodb").MongoClient;
-
-  // var url =
-  //   "mongodb+srv://gjbeech:id*$XT90@cluster0.cs5lk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
-  // MongoClient.connect(url, function (err, db) {
-  //   console.dir("Connected to MongoDB");
-  //   db.close();
-  // });
-
-  // var dbConn = initDb();
-
   // return (
   //   <div>
   //     <Head>
