@@ -8,6 +8,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import CreateListItem from "../components/CreateListItem";
+import { Lists } from "../components/Lists";
 
 interface IndexProps {
   lists: Array<List>;
@@ -26,6 +27,8 @@ function Index(props: IndexProps) {
       <Nav />
       <main>
         <div className="itemsection">
+          Lists:
+          <Lists data={lists} />
           <ListView />
           <ul>
             {lists.map((t) => (

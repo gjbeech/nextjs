@@ -20,7 +20,7 @@ function CreateItem(props: CreateProps) {
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
 
-    let listItem: ListItem = { item: "", listId: "" };
+    let listItem: ListItem = { item: "", listId: "", completed: false };
 
     if (item.current !== null && list.current !== null) {
       if (item.current.value !== "") {
@@ -28,6 +28,7 @@ function CreateItem(props: CreateProps) {
         listItem = {
           item: item.current.value,
           listId: list.current.value,
+          completed: false,
         };
 
         console.log(listItem);

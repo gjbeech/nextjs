@@ -6,14 +6,14 @@ import Link from "next/link";
 
 interface ShowProps {
   thisList: List;
-  items: Array<List>;
+  items: Array<ListItem>;
   url: string;
 }
 
 function Show(props: ShowProps) {
   const router = useRouter();
   const [thisList, setList] = useState<List>(props.thisList);
-  const items = useState<ListItem>(props.items);
+  const items = useState<Array<ListItem>>(props.items);
 
   console.log(items);
 

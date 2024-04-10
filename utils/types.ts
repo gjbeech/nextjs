@@ -10,6 +10,7 @@ export interface ListItem {
   _id?: number;
   item: string;
   listId: string;
+  completed: boolean;
 }
 
 export interface List {

@@ -13,9 +13,9 @@ function CreateListItem(props: CreateProps) {
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
 
-    let listItem: ListItem = { item: "", completed: false };
+    let listItem: ListItem = { item: "", completed: false, listId: "" };
     if (null !== item.current) {
-      listItem = { item: item.current.value, completed: false };
+      listItem = { item: item.current.value, completed: false, listId: "" };
     }
 
     await fetch(props.url, {
@@ -33,7 +33,8 @@ function CreateListItem(props: CreateProps) {
     <div>
       <h1>Create a New Item</h1>
       <form onSubmit={handleSubmit}>
-        <input type="text" ref={item}></input>
+        <label htmlFor="itemName">Name: </label>
+        <input type="text" ref={item} id="itemName"></input>
         <input
           className="orangeButton"
           type="submit"
